@@ -22,7 +22,7 @@ export function TextInput({ value, onChange, maxChars }) {
     <div className="space-y-2">
       <Textarea
         placeholder="请在此输入或粘贴文本内容..."
-        className="h-[200px] font-mono text-sm overflow-y-auto resize-none"
+        className="h-[192px] font-mono text-sm overflow-y-auto resize-none"
         value={value}
         onChange={handleChange}
       />
