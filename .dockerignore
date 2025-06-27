@@ -1,0 +1,16 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.env
+.env.local
+.env.production.local
+.env.local
+.git
+.gitignore
+.next
+.vercel
+*.md
+.DS_Store
+Thumbs.db

@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  smart-mermaid:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_DAILY_USAGE_LIMIT=5
+      - NEXT_PUBLIC_MAX_CHARS=20000
+    restart: unless-stopped
+    container_name: smart-mermaid-app
+    
+  # 可选：添加 nginx 反向代理
+  # nginx:
+  #   image: nginx:alpine
+  #   ports:
+  #     - "80:80"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  #   depends_on:
+  #     - smart-mermaid
+  #   restart: unless-stopped
+  #   container_name: smart-mermaid-nginx
